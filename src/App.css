@@ -1,0 +1,114 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root{
+
+  --scissors-gradient: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  --paper-gradient: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  --rock-gradient: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+  --lizard-gradient: linear-gradient(hsl(261, 73%, 60%), hsl(261, 72%, 63%));
+  --cyan-gradient: linear-gradient(hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+
+  --dark-text: hsl(229, 25%, 31%);
+  --score-text: hsl(229, 64%, 46%);
+  --header-outline: hsl(217, 16%, 45%);
+
+  --radial-gradient: linear-gradient(to bottom, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
+
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url('./fonts/barlow_semi_condensed/BarlowSemiCondensed-Bold.ttf');
+}
+/* .barlow-semi-condensed-thin {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+} */
+
+
+/* Puplic */
+.trans{
+  transition: 1.5s;
+}
+
+
+.app{
+  font-family: "Barlow Semi Condensed", sans-serif;
+  /* font-weight: 700;  */
+  background-image: var(--radial-gradient);
+}
+
+/* Header */
+.header{
+  border: 3px solid var(--header-outline);
+}
+.header h1{
+  color: var(--dark-text);
+}
+.header p{
+  letter-spacing: 2px;
+  color: var(--score-text)
+}
+
+
+/* Choice */
+.outer-circle.rock{
+  background-color: hsl(349, 70%, 56%);
+  box-shadow: inset 0px -8px 0px 0px hsl(349, 71%, 52%);
+}
+.outer-circle.paper{
+  background-color: hsl(230, 89%, 65%);
+  box-shadow: inset 0px -8px 0px 0px hsl(230, 89%, 62%);
+  /* box-shadow: inset 0px -6px 0px 0px rgb(34 77 172); */
+}
+.outer-circle.scissors{
+  background-color: hsl(40, 84%, 53%);
+  box-shadow: inset 0px -8px 0px 0px hsl(39, 89%, 49%);
+}
+
+.inner-circle{
+  box-shadow: inset 0px 6px 0px 0px #e9e9e9;
+}
+
+
+/* Step Two */
+.step-two{
+  transition: 1.5s;
+}
+
+.score-modal{
+  color: var(--dark-text);
+}
+
+.layer-1{
+  opacity: 0;
+  transition: .25s;
+  animation: fading .5s ease 2.5s forwards;
+  background-color: rgb(43 57 86);
+}
+.layer-2{
+  opacity: 0;
+  transition: .25s;
+  animation: fading .5s ease 2.75s forwards;
+  background-color: rgb(35 46 76);
+}
+.layer-3{
+  opacity: 0;
+  transition: .25s;
+  animation: fading .5s ease 3s forwards;
+  background-color: rgb(30 39 72);
+}
+
+
+
+/* Rules */
+
+.rules h1{
+  color: var(--dark-text)
+}
+.rules {
+  background-color: rgb(30 39 72 / 50%);
+
+}
